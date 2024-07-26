@@ -4,8 +4,9 @@ import React from 'react'
 import logo from '@/public/logo.png'
 import Section from '../section/page'
 import Main from '../main/page'
-import Footer from '../footer/page'
 import ReviewCard from '../ReviewCard/page'
+import Footer from '../footer/page'
+import TravelSearch from './TravelSearch/page'
 
 function LandingPage() {
 	return (
@@ -33,10 +34,11 @@ function LandingPage() {
 					<p className=' font-semibold text-lg text-white'>Special offers to suit your plan</p>
 				</div>
 			</div>
+			<TravelSearch/>
 			<Section />
 			<Main />
 			<ReviewCard/>
-			<Footer />
+			<Footer/>
 		</>
 	)
 }
