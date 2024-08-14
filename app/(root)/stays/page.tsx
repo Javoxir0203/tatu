@@ -9,7 +9,7 @@ const Stays: React.FC = () => {
 			<TravelPage />
 			<Travel />
 			<TravelSection />
-			<Footer />
+            <Footer/>
 		</div>
 	)
 }
