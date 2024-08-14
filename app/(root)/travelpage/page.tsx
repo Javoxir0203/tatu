@@ -1,13 +1,13 @@
 // components/TravelPage.tsx
 import Image from 'next/image'
 import React from 'react'
-import travel from '@/public/travel/travel.png'
+import travel1 from '@/public/travel/travel.png'
 import { Button } from '@/components/ui/button'
 const TravelPage: React.FC = () => {
 	return (
 		<div className='relative'>
 			<div className='relative h-96'>
-				<Image src={travel} alt='Airport' className='w-full h-full object-cover' />
+				<Image src={travel1} alt='Airport' className='w-full h-full object-cover' />
 				<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white p-4'>
 					<h1 className='text-4xl font-bold mb-4 text-center'>Make your travel wishlist, we’ll do the rest</h1>
 					<p className='text-lg mb-4 text-center'>Special offers to suit your plan</p>
