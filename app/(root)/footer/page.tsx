@@ -4,7 +4,7 @@ import SectionFooter from './section_footer/page'
 
 function Footer() {
 	return (
-		<div className="">
+		<div className='relative h-max'>
 			<BtnFooter />
 			<SectionFooter />
 		</div>

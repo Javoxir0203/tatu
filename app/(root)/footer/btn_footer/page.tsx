@@ -2,7 +2,7 @@ import Image from 'next/image'
 import userimage from '@/public/userimage.svg'
 function BtnFooter() {
 	return (
-		<div className='p-8'>
+		<div className='p-8 relative top-20'>
 			<div className='bg-[#CDEAE1] max-w-full p-6 h-66 rounded-lg   shadow-lg flex justify-between'>
 				<div className='w-full'>
 					<h1 className='text-3xl font-bold mb-2'>

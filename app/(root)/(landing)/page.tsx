@@ -11,12 +11,16 @@ import Link from 'next/link'
 
 function LandingPage() {
 	return (
-		<>
-			<div className='w-full h-[80vh]  bg-banner  '>
+		<div className='relative p-8'>
+			<div className='w-full h-[80vh] bg-banner'>
 				<header className='flex h-max items-start p-10   justify-between'>
 					<div className='flex items-start  gap-5'>
-						<Link href={'/flight'} className='text-white '>Find Flight</Link>
-						<Link href={'/stays'} className='text-white'>Find Stays</Link>
+						<Link href={'/flight'} className='text-white '>
+							Find Flight
+						</Link>
+						<Link href={'/stays'} className='text-white'>
+							Find Stays
+						</Link>
 					</div>
 
 					<div>
@@ -24,8 +28,12 @@ function LandingPage() {
 					</div>
 
 					<div className='flex items-start gap-8'>
-						<Link href={'/login'} className='bg-slate-100 w-20 h-8 text-center border rounded-md pt-1'>Login</Link>
-						<Link href={'/sign_up'} className='bg-slate-100 w-20 h-8 text-center border rounded-md pt-1'>Sign up</Link>
+						<Link href={'/login'} className='bg-slate-100 w-20 h-8 text-center border rounded-md pt-1'>
+							Login
+						</Link>
+						<Link href={'/sign_up'} className='bg-slate-100 w-20 h-8 text-center border rounded-md pt-1'>
+							Sign up
+						</Link>
 					</div>
 				</header>
 
@@ -35,12 +43,12 @@ function LandingPage() {
 					<p className=' font-semibold text-lg text-white'>Special offers to suit your plan</p>
 				</div>
 			</div>
-			<TravelSearch/>
+			<TravelSearch />
 			<Section />
 			<Main />
-			<ReviewCard/>
-			<Footer/>
-		</>
+			<ReviewCard />
+			<Footer />
+		</div>
 	)
 }
 

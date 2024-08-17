@@ -6,15 +6,15 @@ import TravelMap from '../travelmap/page'
 import TravelPage from '../travelpage/page'
 
 function Flight() {
-  return (
-    <div>
-      <TravelPage/>
-      <TravelMap/>
-        <Travel/>
-        <TravelSection/>
-        <Footer/>
-    </div>
-  )
+	return (
+		<div>
+			<TravelPage />
+			<TravelMap />
+			<Travel />
+			<TravelSection />
+			<Footer />
+		</div>
+	)
 }
 
 export default Flight

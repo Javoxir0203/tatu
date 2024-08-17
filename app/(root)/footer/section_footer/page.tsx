@@ -7,7 +7,7 @@ import icon2 from '@/public/icon2.svg'
 import icon3 from '@/public/icon3.svg'
 function SectionFooter() {
 	return (
-		<footer className='bg-[#8DD3BB] text-gray-300 p-6 md:py-12 w-full'>
+		<footer className='bg-[#8DD3BB] text-gray-300 p-6 md:py-24 w-full'>
 			<div className='container max-w-7xl grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6 gap-8'>
 				<div className='space-y-2'>
 					<Image src={footer_logo} alt='Logo' width={96} height={96} />

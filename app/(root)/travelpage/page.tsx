@@ -13,7 +13,8 @@ const TravelPage: React.FC = () => {
 					<p className='text-lg mb-4 text-center'>Special offers to suit your plan</p>
 				</div>
 			</div>
-			<div className='bg-white p-8 rounded-xl shadow-xl -mt-20 mx-auto max-w-4xl'>
+
+			<div className='bg-white relative p-8 rounded-xl shadow-xl mb-8 -mt-20 mx-auto max-w-4xl'>
 				<h2 className='text-2xl font-semibold mb-6 text-center'>Where are you flying?</h2>
 				<form className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4'>
 					<div className='col-span-1'>
@@ -27,6 +28,7 @@ const TravelPage: React.FC = () => {
 							<option>One-way</option>
 						</select>
 					</div>
+
 					<div className='col-span-1'>
 						<label className='block mb-2 text-sm font-medium text-gray-700'>Depart - Return</label>
 						<input type='text' placeholder='07 Nov 22 - 13 Nov 22' className='w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500' />

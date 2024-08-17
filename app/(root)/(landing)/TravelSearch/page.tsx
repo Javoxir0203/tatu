@@ -1,9 +1,11 @@
+import { Button } from '@/components/ui/button'
+import Link from 'next/link'
 import React from 'react'
 import { FaPlane, FaBed, FaExchangeAlt } from 'react-icons/fa'
 
 function TravelSearch() {
 	return (
-		<div className=' bg-white p-8 rounded-lg shadow-lg max-w-7xl mx-auto mt-10'>
+		<div className=' bg-white relative -mt-32 p-8 rounded-lg shadow-lg max-w-7xl mx-auto'>
 			<div className='flex items-center gap-8 border-b-2 border-gray-300 pb-4 mb-4'>
 				<button className='flex items-center space-x-2 text-green-900 font-semibold'>
 					<FaPlane />
@@ -31,6 +33,7 @@ function TravelSearch() {
 						</select>
 					</div>
 				</div>
+
 				<div className='flex space-x-4'>
 					<div className='flex-1'>
 						<label className='block text-gray-600'>Depart - Return</label>
@@ -41,14 +44,15 @@ function TravelSearch() {
 						<input type='text' placeholder='1 Passenger, Economy' className='w-full border rounded-lg p-2' />
 					</div>
 				</div>
-				<div className='flex justify-end items-center gap-2'>
+
+				<div className='flex w-full col-span-2 justify-end items-center gap-2'>
 					<button className='flex items-center space-x-2 text-green-900 font-semibold'>
 						<span> + Add Promo Code </span>
 					</button>
-					<button className='bg-green-700 text-white rounded-lg px-6 py-2 flex items-center space-x-2'>
+					<Button className='bg-green-700 text-white rounded-lg px-6 py-2 flex items-center space-x-2'>
 						<FaPlane />
-						<span> Show Flights </span>
-					</button>
+						<Link href='/show'> Show Flights </Link>
+					</Button>
 				</div>
 			</form>
 		</div>

@@ -6,7 +6,7 @@ import travel3 from '@/public/travel/travel3.png'
 import { Button } from '@/components/ui/button'
 const Travel: React.FC = () => {
 	return (
-		<div className='min-h-screen bg-gray-100 p-8'>
+		<div className='h-max bg-gray-100 p-8'>
 			<div className='max-w-7xl mx-auto'>
 				<div className='flex items-center justify-between mb-8'>
 					<div>
