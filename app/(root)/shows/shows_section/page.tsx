@@ -24,7 +24,7 @@ function Shows_Section() {
 					</div>
 				</div>
 			</div>
-			<p className=' container border rounded '></p>
+			<p className='container border rounded '></p>
 		</>
 	)
 }
