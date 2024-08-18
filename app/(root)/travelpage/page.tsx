@@ -3,6 +3,7 @@ import Image from 'next/image'
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import filght from '@/filght.jpeg'
+import Link from 'next/link'
 const TravelPage: React.FC = () => {
 	return (
 		<div className='relative'>
@@ -45,7 +46,7 @@ const TravelPage: React.FC = () => {
 						</div>
 						<div className='col-span-2 sm:col-span-1 lg:col-span-2'>
 							<Button type='submit' className='w-full p-3 bg-green-500 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-green-500'>
-								Show Flights
+								<Link href={'shows'}> Shows Flights</Link>
 							</Button>
 						</div>
 					</div>
