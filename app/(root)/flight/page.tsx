@@ -9,7 +9,7 @@ import Navbar from '../navbar/page'
 function Flight() {
 	return (
 		<div>
-      <Navbar/>
+			<Navbar />
 			<TravelPage />
 			<TravelMap />
 			<Travel />

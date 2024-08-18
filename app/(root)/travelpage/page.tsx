@@ -1,8 +1,8 @@
-// components/TravelPage.tsx
+'use client'
 import Image from 'next/image'
 import React from 'react'
 import { Button } from '@/components/ui/button'
-import filght from '@/filght.jpeg'
+import filght from '@/public/filght.jpeg'
 import Link from 'next/link'
 const TravelPage: React.FC = () => {
 	return (
