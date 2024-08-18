@@ -1,13 +1,13 @@
 // components/TravelPage.tsx
 import Image from 'next/image'
 import React from 'react'
-import travel1 from '@/public/travel/travel.png'
 import { Button } from '@/components/ui/button'
+import filght from '@/filght.jpeg'
 const TravelPage: React.FC = () => {
 	return (
 		<div className='relative'>
 			<div className='relative h-96'>
-				<Image src={travel1} alt='Airport' className='w-full h-full object-cover' />
+				<Image src={filght} alt='Airport' className='w-full h-full object-cover' />
 				<div className='absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white p-4'>
 					<h1 className='text-4xl font-bold mb-4 text-center'>Make your travel wishlist, we’ll do the rest</h1>
 					<p className='text-lg mb-4 text-center'>Special offers to suit your plan</p>
@@ -37,7 +37,7 @@ const TravelPage: React.FC = () => {
 						<label className='block mb-2 text-sm font-medium text-gray-700'>Passenger - Class</label>
 						<input type='text' placeholder='1 Passenger, Economy' className='w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500' />
 					</div>
-					<div className='flex justify-between  gap-4'>
+					<div className='flex w-full  justify-between items-center gap-2'>
 						<div className='col-span-2  sm:col-span-1'>
 							<Button type='button' className='w-full p-3 border bg-gray-100 text-black border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500'>
 								+ Add Promo Code
