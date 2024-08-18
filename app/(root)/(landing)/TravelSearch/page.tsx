@@ -4,7 +4,6 @@ import { FaPlane, FaBed, FaExchangeAlt } from 'react-icons/fa'
 // import DatePicker from 'react-date-picker'
 // import { useState } from 'react'
 
-
 type ValuePiece = Date | null
 
 type Value = ValuePiece | [ValuePiece, ValuePiece]
@@ -54,7 +53,7 @@ function TravelSearch() {
 
 				<div className='flex w-full col-span-2 justify-end items-center gap-2'>
 					<Button className='flex items-center space-x-2 text-green-900 font-semibold'>
-						<span> + Add Promo Code </span>
+						<span className='text-sm text-white'> + Add Promo Code </span>
 					</Button>
 					<Button className='bg-green-700 text-white rounded-lg px-6 py-2 flex items-center space-x-2'>
 						<FaPlane />

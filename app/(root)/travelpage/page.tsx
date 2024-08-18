@@ -29,6 +29,7 @@ const TravelPage: React.FC = () => {
 							<option>One-way</option>
 						</select>
 					</div>
+					
 
 					<div className='col-span-1'>
 						<label className='block mb-2 text-sm font-medium text-gray-700'>Depart - Return</label>
