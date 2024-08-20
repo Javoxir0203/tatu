@@ -16,9 +16,13 @@ import { CalendarIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { format } from 'date-fns'
 import { FaPlane } from 'react-icons/fa'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import Link from 'next/link'
 const TravelPage = () => {
+	const pathname = usePathname()
+
+	console.log(pathname)
+
 	const { push } = useRouter()
 	const formSchema = z.object({
 		username: z.string().min(2, { message: 'Username must be at least 2 characters.' }),
@@ -151,9 +155,7 @@ const TravelPage = () => {
 						<div className='w-full flex items-center justify-end'>
 							<Button type='submit' className='bg-green-700 text-white rounded-lg px-6 py-2 flex items-center space-x-2'>
 								<FaPlane />
-								<Link href={'/shows'}>
-								Show Flights
-								</Link>
+								<Link href={pathname === '/stays' ? '/shows' : '/show'}>Show Flights</Link>
 							</Button>
 						</div>
 					</form>
