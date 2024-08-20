@@ -1,7 +1,24 @@
+'use client'
 import Image from 'next/image'
 import signup from '@/public/sign_up.png'
 import logo from '@/public/login_logo.png'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 const SignUp: React.FC = () => {
+	const { push } = useRouter()
+	const handleSubmit = (e: any) => {
+		e.preventDefault()
+		const { password, email } = e.target
+
+		const user = {
+			email: email.value,
+			password: password.value,
+		}
+
+		localStorage.setItem('user', JSON.stringify(user))
+
+		push('/')
+	}
 	return (
 		<div className='min-h-screen flex items-center justify-center bg-gray-100'>
 			<div className='flex bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl w-full'>
@@ -11,7 +28,7 @@ const SignUp: React.FC = () => {
 						<h1 className='text-2xl font-bold mb-2'>Sign up</h1>
 						<p className='text-gray-600'>Let`s get you all set up so you can access your personal account.</p>
 					</div>
-					<form>
+					<form onSubmit={handleSubmit}>
 						<div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 							<div className='mb-4'>
 								<label htmlFor='firstName' className='block text-sm font-semibold mb-2'>
@@ -65,6 +82,7 @@ const SignUp: React.FC = () => {
 								</a>
 							</label>
 						</div>
+
 						<button type='submit' className='w-full bg-green-500 text-white py-2 rounded-lg hover:bg-green-600 transition duration-200'>
 							Create account
 						</button>
@@ -72,7 +90,7 @@ const SignUp: React.FC = () => {
 					<div className='text-center mt-4'>
 						<span>Already have an account? </span>
 						<a href='#' className='text-red-500 hover:underline'>
-							Login
+							<Link href={'/login'}>Login</Link>
 						</a>
 					</div>
 					<div className='mt-4 text-center'>

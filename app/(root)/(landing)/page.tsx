@@ -1,3 +1,4 @@
+'use client'
 import { Button } from '@/components/ui/button'
 import Image from 'next/image'
 import React from 'react'
@@ -8,8 +9,18 @@ import ReviewCard from '../ReviewCard/page'
 import Footer from '../footer/page'
 import TravelSearch from './TravelSearch/page'
 import Link from 'next/link'
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '@/components/ui/dropdown-menu'
+import { useRouter } from 'next/navigation'
 
 function LandingPage() {
+	const { push } = useRouter()
+	const user: any = localStorage.getItem('user') || ''
+
+	const logout = () => {
+		localStorage.removeItem('user')
+		push('/login')
+	}
 	return (
 		<>
 			<div className='relative p-8'>
@@ -29,12 +40,33 @@ function LandingPage() {
 						</div>
 
 						<div className='flex items-start gap-8'>
-							<Link href={'/login'} className='bg-slate-100 w-20 h-8 text-center border rounded-md pt-1'>
-								Login
-							</Link>
-							<Link href={'/sign_up'} className='bg-slate-100 w-20 h-8 text-center border rounded-md pt-1'>
-								Sign up
-							</Link>
+							{user ? (
+								<DropdownMenu>
+									<DropdownMenuTrigger asChild>
+										<Avatar>
+											<AvatarImage src='https://github.com/shadcn.png' alt='@shadcn' />
+											<AvatarFallback>CN</AvatarFallback>
+										</Avatar>
+									</DropdownMenuTrigger>
+									<DropdownMenuContent>
+										<DropdownMenuLabel>My Account</DropdownMenuLabel>
+										<DropdownMenuSeparator />
+										<DropdownMenuItem>
+											<Link href={'/accountPage'}>Profile</Link>
+										</DropdownMenuItem>
+										<DropdownMenuItem onClick={logout}>Log out</DropdownMenuItem>
+									</DropdownMenuContent>
+								</DropdownMenu>
+							) : (
+								<>
+									<Link href='/login' className='text-black'>
+										Login
+									</Link>
+									<Link href='/accountPage' className='px-4 py-2 bg-black text-white rounded-md hover:bg-gray-700'>
+										Sign up
+									</Link>
+								</>
+							)}
 						</div>
 					</header>
 

@@ -1,24 +1,43 @@
+'use client'
+
 // pages/login.tsx
 import Image from 'next/image'
 import login from '@/public/login.png'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
+
 const Login: React.FC = () => {
+	const { push } = useRouter()
+	const handleSubmit = (e: any) => {
+		e.preventDefault()
+		const { password, email } = e.target
+
+		const user = {
+			email: email.value,
+			password: password.value,
+		}
+
+		localStorage.setItem('user', JSON.stringify(user))
+
+		push('/')
+	}
 	return (
 		<div className='min-h-screen flex items-center justify-center bg-gray-100'>
 			<div className='flex bg-white rounded-lg shadow-lg overflow-hidden max-w-4xl w-full'>
 				<div className='w-1/2 p-8'>
 					<h1 className='text-2xl font-bold mb-8'>Login</h1>
-					<form>
+					<form onSubmit={handleSubmit}>
 						<div className='mb-4'>
 							<label htmlFor='email' className='block text-sm font-semibold mb-2'>
 								Email
 							</label>
-							<input type='email' id='email' className='w-full px-3 py-2 border border-gray-300 rounded-lg' />
+							<input name='email' type='email' id='email' className='w-full px-3 py-2 border border-gray-300 rounded-lg' />
 						</div>
 						<div className='mb-4'>
 							<label htmlFor='password' className='block text-sm font-semibold mb-2'>
 								Password
 							</label>
-							<input type='password' id='password' className='w-full px-3 py-2 border border-gray-300 rounded-lg' />
+							<input name='password' type='password' id='password' className='w-full px-3 py-2 border border-gray-300 rounded-lg' />
 						</div>
 						<div className='flex items-center justify-between mb-4'>
 							<label className='inline-flex items-center'>
@@ -36,7 +55,7 @@ const Login: React.FC = () => {
 					<div className='text-center mt-4'>
 						<span>Don`t have an account? </span>
 						<a href='#' className='text-blue-500 hover:underline'>
-							Sign up
+							<Link href={'/sign_up'}>Sign up</Link>
 						</a>
 					</div>
 					<div className='mt-4 text-center'>

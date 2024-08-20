@@ -13,7 +13,7 @@ const Profile: React.FC = () => {
 						Upload new cover
 					</button>
 				</div>
-				<div className='flex justify-center -mt-16'>
+				<div className='flex relative justify-center -mt-16'>
 					<Image src={people} alt='Profile' className='w-32 h-32  rounded-full border-4 border-white' />
 				</div>
 				<div className='text-center mt-4'>

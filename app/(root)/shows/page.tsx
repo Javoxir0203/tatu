@@ -5,6 +5,8 @@ import HotelCard from '../hotelCard/page'
 import Shows_Section from './shows_section/page'
 import Home from './shows_main/page'
 import LocationMap from './locationMap/page'
+import Amenities from './amenities/page'
+import Reviews from './eviews/page'
 
 function Shows() {
 	return (
@@ -13,7 +15,9 @@ function Shows() {
 			<HotelCard />
 			<Shows_Section />
 			<Home />
-      <LocationMap/>
+			<LocationMap />
+			<Amenities />
+			<Reviews/>
 			<Footer />
 		</div>
 	)
